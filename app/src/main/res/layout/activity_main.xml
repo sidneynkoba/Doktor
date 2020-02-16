@@ -39,11 +39,11 @@
             android:textColor="#fff" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/textGray"
-            android:text="@string/mock_date"
+            android:hint="@string/mock_date"
             android:paddingTop="10dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 

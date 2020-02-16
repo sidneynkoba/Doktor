@@ -7,6 +7,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -40,6 +45,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         smsButton = findViewById(R.id.smsButton);
         smsButton.setOnClickListener(this);
 
+        Calendar calendar = Calendar.getInstance();
+        String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
+        TextView date = findViewById(R.id.date);
+        date.setText(currentDate);
+
     }
 
 
@@ -63,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.callButton:
-                String phone = "+256704367954";
+                String phone = "+256777164339";
                 Intent phoneIntent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
                 startActivity(phoneIntent);
                 break;
@@ -80,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.smsButton:
                 Intent smsIntent = new Intent(Intent.ACTION_VIEW);
                 smsIntent.setType("vnd.android-dir/mms-sms");
-                smsIntent.putExtra("address", "12125551212");
+                smsIntent.putExtra("address", "+256777164339");
                 smsIntent.putExtra("sms_body","Body of Message");
                 startActivity(smsIntent);
                 break;
