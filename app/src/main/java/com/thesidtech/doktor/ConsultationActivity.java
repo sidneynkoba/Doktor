@@ -250,33 +250,33 @@ public class ConsultationActivity extends AppCompatActivity {
             Toast.makeText(this,"MISSING FIELD IS REQUIRED!",Toast.LENGTH_SHORT).show();
         }else {
 
-            sendCaseMail();
+//            sendCaseMail();
 
-//            pickphonenumber=phoneNo.getText().toString().trim();
-//            /////add stuff here
-//            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//
-//            final AlertDialog paymentDialog=new AlertDialog.Builder(this).create();
-//            final View payview= inflater.inflate(R.layout.mobile_money_pay, null, false);
-//
-//            paymentDialog.setView(payview);
-//
-//            final Button paybtn=(Button)payview.findViewById(R.id.btnPay);
-//
-//            paybtn.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    paymentDialog.dismiss();
-//                    //check Network Connection
-//                    new collectMoney().execute();
-//                    //collect Money
-//                    //sendCaseMail();
-//                }
-//            });
-//
-//            paymentDialog.show();
-//            // paymentDialog.setCancelable(false);
-//            //////add stuff here
+            pickphonenumber=phoneNo.getText().toString().trim();
+            /////add stuff here
+            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            final AlertDialog paymentDialog=new AlertDialog.Builder(this).create();
+            final View payview= inflater.inflate(R.layout.mobile_money_pay, null, false);
+
+            paymentDialog.setView(payview);
+
+            final Button paybtn=(Button)payview.findViewById(R.id.btnPay);
+
+            paybtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    paymentDialog.dismiss();
+                    //check Network Connection
+                    new collectMoney().execute();
+                    //collect Money
+                    //sendCaseMail();
+                }
+            });
+
+            paymentDialog.show();
+            // paymentDialog.setCancelable(false);
+            //////add stuff here
 
             caseDescription.setText("");
             phoneNo.setText("");
