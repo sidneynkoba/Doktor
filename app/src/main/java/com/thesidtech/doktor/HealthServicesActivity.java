@@ -33,7 +33,7 @@ public class HealthServicesActivity extends AppCompatActivity {
 
         health_services = findViewById(R.id.health_services_web);
         health_services.setWebViewClient(new WebViewClient());
-        health_services.loadUrl("https://destinyinternationalschool.com/doc/services.php");
+        health_services.loadUrl("https://destinyinternationalschool.com/dokta-search/index.php");
 
         WebSettings webSettings = health_services.getSettings();
         webSettings.setJavaScriptEnabled(true);

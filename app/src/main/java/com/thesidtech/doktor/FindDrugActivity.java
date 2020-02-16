@@ -25,7 +25,7 @@ public class FindDrugActivity extends AppCompatActivity {
 
         find_drug = findViewById(R.id.find_drug_web);
         find_drug.setWebViewClient(new WebViewClient());
-        find_drug.loadUrl("https://destinyinternationalschool.com/doc/index.php");
+        find_drug.loadUrl("https://destinyinternationalschool.com/dokta-search/index.php");
 
         WebSettings webSettings = find_drug.getSettings();
         webSettings.setJavaScriptEnabled(true);

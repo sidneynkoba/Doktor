@@ -18,7 +18,7 @@ public class AppointmentActivity extends AppCompatActivity {
 
         appointment = findViewById(R.id.appointment_web);
         appointment.setWebViewClient(new WebViewClient());
-        appointment.loadUrl("http://hsvug.com/appoint/");
+        appointment.loadUrl("https://destinyinternationalschool.com/doctor");
 
         WebSettings webSettings = appointment.getSettings();
         webSettings.setJavaScriptEnabled(true);
